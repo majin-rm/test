@@ -1,4 +1,4 @@
-FROM jenkins/agent:alpine-jdk21
+FROM jenkins/agent:jdk21
 
 USER root
 RUN apk add python3

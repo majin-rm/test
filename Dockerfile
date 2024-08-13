@@ -1,3 +1,7 @@
-FROM ubuntu:latest
+FROM jenkins/agent:alpine-jdk21
 
-RUN apt-get update && apt-get install -y --no-install-recommends python3.12 python3-pip && apt-get clean
+USER root
+RUN apk add python3
+RUN apk add py3-pip
+
+USER jenkins
